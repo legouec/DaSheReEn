@@ -39,14 +39,21 @@ class ProduitController extends Controller{
   
     public function updateProduit(Request $request,$id){
         $Produit  = Produit::find($id);
-        $Produit->ref = $request->input('ref');
-        $Produit->nom = $request->input('nom');
-        $Produit->nom = $request->input('domaine');
-        $Produit->categorie = $request->input('categorie');
-        $Produit->marque = $request->input('marque');
-        $Produit->description = $request->input('description');
-        $Produit->origine = $request->input('origine');
-        $Produit->couleur = $request->input('couleur');
+        $Produit->operationCode = $request->input('operationCode');
+        $Produit->fts_id = $request->input('fts_id');
+        $Produit->fts_operationCode = $request->input('fts_operationCode');
+        $Produit->fts_classification_id = $request->input('fts_classification_id');
+        $Produit->fts_classification_text = $request->input('fts_classification_text');
+        $Produit->fts_attributes_id = $request->input('fts_attributes_id');
+        $Produit->fts_attributes_text = $request->input('fts_attributes_text');
+        $Produit->fts_attributes_value_id = $request->input('fts_attributes_value_id');
+        $Produit->fts_attributes_value_text = $request->input('fts_attributes_value_text');
+        $Produit->fts_attributes_attributes = $request->input('fts_attributes_attributes');
+        $Produit->fts_attributes_value = $request->input('fts_attributes_value');
+        $Produit->fts_attributes_attributes_value = $request->input('fts_attributes_value_id');
+        $Produit->fts_attributes_value_id = $request->input('fts_attributes_attributes_value');
+        $Produit->fts_attributes_attributes_attributes = $request->input('fts_attributes_attributes_attributes');
+        $Produit->fts_id_char = $request->input('fts_id_char');
         $Produit->save();
   
         return response()->json($Produit);
