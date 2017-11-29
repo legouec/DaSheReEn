@@ -14,6 +14,11 @@ class ProduitController extends Controller{
         return response()->json($Produits);
   
     }
+
+    public function showIndex()
+    {
+        return view('produit');
+    }
   
     public function getProduit($id){
   
