@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>ask</title>
+</head>
+<body>
+
+<header>
+	<img src="header.svg">
+	<h2>Formulaire de génération des fiches produits</h2>
+</header>
+
+<div id="main">
+	<section>
+		<nav>
+			<p>Critères de recherche :</p>
+			<form method="post" action="traitement.php">
+				<p>
+					<label for="critere">Ajoutez un critère de recherche</label><br>
+					<select name="critere" id="critere">
+						<option value="botte">chaussures</option>
+						<option value="vin">vins</option>
+						<option value="outils">outils</option>
+					</select>
+				</p>
+			</form>
+
+			<form action="">
+				<input type="submit" value="Submit">
+			</form>
+
+		</nav>
+
+		<article>
+			<p>GG MAGGLE!</p>
+		</article>
+	</section>
+</div>
+
+</body>
+</html>

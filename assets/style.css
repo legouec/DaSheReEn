@@ -1,8 +1,28 @@
+body
+{
+	margin: 0;
+}
+
+header
+{
+	padding: 10px;
+	margin-bottom: 10px;
+	border-top: 2px solid #EC008C;
+	border-bottom: 2px solid #EC008C;
+	background-color: #FC90C2;
+	height: 150px;
+	text-align: center;
+}
+
+#main
+{
+	padding: 10px;
+}
+
 section
 {
 	display: flex;
-	background-color: #CCCCCC;
-/*	padding: 10px;*/
+	/* background-color: #CCCCCC; */
 }
 
 aside
@@ -13,22 +33,30 @@ aside
 	margin: 10px;
 }
 
-h3
+nav
 {
-	max-width: 100px;
+	background-color: #CCCCCC;
+	max-width: 200px;
+	position: absolute;
 }
 
-p
+article
 {
-	margin-left: 100px;
+	background-color: green;
+}
+
+h2
+{
+	text-align: center;
+}
+
+h3
+{
+	min-width: 200px;
+	max-width: 200px;
 }
 
 img
 {
 	max-height: 100px;
-}
-
-#main
-{
-	padding: 10px;
 }
