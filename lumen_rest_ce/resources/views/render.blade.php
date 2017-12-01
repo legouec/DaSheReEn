@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<aside><img src="/css/logo.png"></a></aside>
+<aside><img alt="logo" src="/css/logo.png"></a></aside>
 
 <section>
 	<div><strong>Ref :</strong><span id="fts_id"></span></div>

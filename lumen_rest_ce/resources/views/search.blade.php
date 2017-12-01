@@ -18,8 +18,8 @@
 			<form method="post" action="traitement.php">
 				<p>
 					<label id="ajout_critere" for="critere">Ajoutez un critère de recherche</label><br>
-					<select id="select_critere"></select>
-					<select id="select_critere_attributes"></select>
+					Attribut <select id="select_critere"></select>
+					Valeur <select id="select_critere_attributes"></select>
 				</p>
 			</form>
 
