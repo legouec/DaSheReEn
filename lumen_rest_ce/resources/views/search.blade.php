@@ -45,20 +45,26 @@
 		for (; i < il; i += 1) {
 		    option = document.createElement('option');
 		    option.setAttribute('value', produits[i].fts_attributes_text);
-		    option.setAttribute('onclick', 'getSelectCriteresAttributes(i);');
+		    option.setAttribute('onclick', 'getSelectCriteresAttributes('+produits[i].fts_attributes_text+');');
 		    option.appendChild(document.createTextNode(produits[i].fts_attributes_text));
 	    	select.appendChild(option);
 		}
 		document.getElementById(select_critere).innerHTML = select;
 	
-	function getSelectCriteresAttributes(i) {
+	function getSelectCriteresAttributes(id) {
 		var produits = <?php echo $produits; ?>;
 		var select = document.getElementById('select_critere_attributes'),
-		    option;
-	    option = document.createElement('option');
-	    option.setAttribute('value', produits[i].fts_attributes_value_text);
-	    option.appendChild(document.createTextNode(produits[i].fts_attributes_value_text));
-    	select.appendChild(option);
+		    option,
+		    i = 0,
+		    il = produits.length;
+		for (; i < il; i += 1) {
+			if (produits[i].fts_attributes_text === id) {
+			    option = document.createElement('option');
+			    option.setAttribute('value', produits[i].fts_attributes_text);
+			    option.appendChild(document.createTextNode(produits[i].fts_attributes_text));
+		    	select.appendChild(option);
+	    	}
+		}
 		document.getElementById(select_critere_attributes).innerHTML = select;
 	}
 
