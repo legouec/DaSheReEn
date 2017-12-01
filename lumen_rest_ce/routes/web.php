@@ -15,7 +15,9 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-Route::get('/', 'ProduitController@showIndex');
+Route::get('render', 'ProduitController@showIndex');
+
+Route::get('search', 'ProduitController@getDistinctValuesProduit');
 
 Route::get('api/v1/produits','ProduitController@index');
  

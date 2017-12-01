@@ -17,7 +17,8 @@ class ProduitController extends Controller{
 
     public function showIndex()
     {
-        return view('produit');
+        $Produits = Produit::all();
+        return view('render')->with('produits',$Produits);  
     }
   
     public function getProduit($id){
@@ -62,6 +63,12 @@ class ProduitController extends Controller{
         $Produit->save();
   
         return response()->json($Produit);
+    }
+
+    public function getDistinctValuesProduit(){
+        $Produits = Produit::distinct()->get(['fts_attributes_text']);
+
+        return view('search')->with('produits',$Produits);
     }
 }
 ?>
