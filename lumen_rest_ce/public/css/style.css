@@ -1,0 +1,62 @@
+body
+{
+    margin: 0;
+}
+
+header
+{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top: 2px solid #EC008C;
+    border-bottom: 2px solid #EC008C;
+    background-color: #FC90C2;
+    height: 150px;
+    text-align: center;
+}
+
+#main
+{
+    padding: 10px;
+}
+
+section
+{
+    display: flex;
+    /* background-color: #CCCCCC; */
+}
+
+aside
+{
+    background-color: #CCCCCC;
+    position: absolute;
+    right: 8px;
+    margin: 10px;
+}
+
+nav
+{
+    background-color: #CCCCCC;
+    max-width: 200px;
+    position: absolute;
+}
+
+article
+{
+    background-color: green;
+}
+
+h2
+{
+    text-align: center;
+}
+
+h3
+{
+    min-width: 200px;
+    max-width: 200px;
+}
+
+img
+{
+    max-height: 100px;
+}
